@@ -11,9 +11,9 @@ from yolov5.utils.plots import Annotator, colors, save_one_box
 from yolov5.utils.torch_utils import select_device, time_sync
 from yolov5.utils.augmentations import letterbox
 
-weights='weights/best_l50.pt'  # model.pt path(s)  #########################
+weights='machine_detect/weights/best_robo250.pt'  # model.pt path(s)  #########################
 # source='data/images'  # file/dir/URL/glob, 0 for webcam
-data='lower.yaml'  # dataset.yaml path  #########################
+data='machine_detect/lower.yaml'  # dataset.yaml path  #########################
 imgsz=(640, 640)  # inference size (height, width)
 conf_thres=0.25  # confidence threshold
 iou_thres=0.45  # NMS IOU threshold
