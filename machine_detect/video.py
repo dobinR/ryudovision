@@ -2,11 +2,14 @@ import cv2
 import detector
 import time 
 
-video_name = 'video/leg_extension1.mp4'
+video_name = 'v_squat.mp4'
 cap = cv2.VideoCapture(video_name)
 
+fps = cap.get(cv2.CAP_PROP_FPS)
+print("fps :", fps)
+
 prev_time = 0
-FPS = 30
+FPS = 6
 
 while True:
     ret, src = cap.read()
