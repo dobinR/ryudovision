@@ -88,6 +88,12 @@ def cnt_cls(det):
         machine, prob = label.split()
     return machine, prob
 
+def coord(det):
+    for *xyxy, conf, cls in reversed(det):
+        c = int(cls)  # integer class
+        label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
+    return xyxy
+
 
 
 'hip_truster', 'leg_extension', 'leg_press', 'lying_leg_curl', 'v_squat', 'hack_squat'

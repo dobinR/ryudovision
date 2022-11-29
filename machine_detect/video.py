@@ -5,6 +5,9 @@ import time
 video_name = 'v_squat.mp4'
 cap = cv2.VideoCapture(video_name)
 
+fps = cap.get(cv2.CAP_PROP_FPS)
+print("fps :", fps)
+
 prev_time = 0
 FPS = 6
 
